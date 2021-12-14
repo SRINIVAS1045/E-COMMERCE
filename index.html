@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BY-IT</title>
+    <link rel="stylesheet" href="./CSS/home.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- INPAGE CSS -->
+    <style>
+        body{
+    background: black;
+    background-attachment:local;
+}
+.slide{
+    margin-top:50px;
+}
+.sliders{
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+.slider{
+    width:800px;
+    height:900px;
+    border-radius:10px;
+    overflow: hidden;
+    
+}
+.slides{
+    width:500%;
+    height:500px;
+    display:flex;
+    
+}
+.slides input{
+    display:none;
+    
+}
+.slide{
+    width:20%;
+    transition:2s;
+    
+
+}
+.slide img{
+    width:800px;
+    height:500px;
+}
+    </style> 
+    
+</head>
+<body>
+    <nav class="navbar" ></nav>
+
+<div id="sliders">
+    <!-- Image slider start -->
+    <div class="slider">
+        <div class="slides">
+            <!-- radio button start -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!-- radio button end -->
+            <!-- slide images start -->
+            <div class="slide first">
+                <img src="./ASSETS/BAN1.gif" alt="">
+            </div>
+            <div class="slide">
+                <img src="./ASSETS/BAN2.gif" alt="">
+            </div>
+            <div class="slide">
+                <img src="./ASSETS/BAN3.gif" alt="">
+            </div>
+            <!-- slide images end -->
+            <!-- automatic navigation start -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            <!-- automatic navigation end -->
+        </div>
+        <!-- manual navigation start -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+        <!-- manual navigation end -->
+    </div>
+    <!-- Image slider end -->
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },5000);
+    </script>
+    </div>
+    <!-- sliders beside text start -->
+    <div class="product1">
+        <h1 >By-It Sale Starts today!</h1>
+        <br>
+        <p>Grab amazing offers by purchasing any item. Discount Coupans will be given for purchase of more than Rs 3000. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatem laborum ipsam tenetur, illo nihil dolore porro, dolorem iusto rem non. Id eligendi ratione, alias quasi inventore reiciendis ut consectetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque unde aut dolor necessitatibus enim? Dolor, quaerat. Totam esse delectus, incidunt exercitationem expedita itaque. Fugiat sequi est commodi ipsam voluptatum architecto tenetur voluptatem, veritatis ipsa, sit mollitia quis eum cumque?</p>
+        <h1 id="nxt">Get By-It Subscription now!!</h1>
+        <p id="pnxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laudantium quidem aperiam consectetur labore, sint at possimus deserunt repellendus necessitatibus rerum, accusantium voluptatem, alias porro. Deleniti ipsam suscipit quis perferendis aliquam illo excepturi asperiores, provident repellendus in. Accusamus, sunt dicta. Maiores, ipsam? Praesentium vitae explicabo dolorum, ipsum quia sint iusto.</p>
+        <h1 id="three">New Arrivals! Dont think, Just By-It</h1>
+        <p id="nxtthree">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor facilis deserunt ipsa aliquid consequatur alias pariatur id odit nisi! Exercitationem natus officiis impedit perferendis accusamus molestias similique! Voluptatibus, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque illum eligendi provident accusamus illo natus quaerat perferendis praesentium eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a saepe impedit, facilis minima aspernatur tempore culpa cumque eaque fugiat vero quis, beatae dolor nam blanditiis, hic itaque veniam soluta quia? Minus odit provident amet nostrum nemo adipisci impedit nihil.</p>
+        
+    </div>
+    <!-- sliders beside text end -->
+    <!-- cards container -->
+    <section class="product">
+        <h2 class="product-category">Best selling in Fashion</h2>
+        <button class="pre-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/dress1.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">NYKAA</h2>
+            <p class="product-short-des">Women's A-Line Maxi|Green</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 3,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/card2.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">HRX</h2>
+            <p class="product-short-des">Blue t-shirt | Men's</p>
+            <span class="price">₹ 1,500</span><span class="actual-price">₹ 4,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/card3.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Superdry</h2>
+            <p class="product-short-des">Beige sweatshirt | Boys</p>
+            <span class="price">₹ 3,499</span><span class="actual-price">₹ 6,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="./ASSETS/card4.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">MAX</h2>
+            <p class="product-short-des">Womens western dress | Red</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 2,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">60% off</span>
+                    <img src="./ASSETS/card5.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Roadster</h2>
+            <p class="product-short-des">Mens shirt | Navy blue</p>
+            <span class="price">₹ 1,599</span><span class="actual-price">₹ 5,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">10% off</span>
+                    <img src="./ASSETS/card8.png" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TWILLS</h2>
+            <p class="product-short-des">Denim shirt for men</p>
+            <span class="price">₹ 2,999</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/card6.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TOMMY HILF</h2>
+            <p class="product-short-des">Sweat shirt | For men</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 4,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/card7.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">ZARA</h2>
+            <p class="product-short-des">Women jacket | Winter sale</p>
+            <span class="price">₹ 3,999</span><span class="actual-price">₹ 6,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/card9.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">PUMA</h2>
+            <p class="product-short-des">HODDIE FOR BOYS | YELLOW</p>
+            <span class="price">₹ 2,000</span><span class="actual-price">₹ 4,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/card10.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">LEVIS</h2>
+            <p class="product-short-des">YELLOW SKIRT FOR GIRLS</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COLLECTIONS -->
+    <section class="collection-container">
+        <a href="#" class="collection">
+            <img src="./ASSETS/women-collection.png" alt="">
+            <p class="collection-title">women <br> apparels</p>
+        </a>
+        <a href="#" class="collection">
+            <img src="./ASSETS/men-collection.png" alt="">
+            <p class="collection-title">men <br> apparels</p>
+        </a>
+        <a href="#" class="collection">
+            <img src="./ASSETS/wideban.gif" alt="">
+        </a>
+    </section>
+        <!-- cards container -->
+        <br>
+        <br>
+    <section class="product">
+        <h2 class="product-category">Trending Shoes</h2><br>
+        <br>
+        <button class="pre-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/shoec1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">WOODLAND</h2>
+            <p class="product-short-des">Polished Formal Shoe</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 3,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/shoec2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">NIKE</h2>
+            <p class="product-short-des">Yellow NIKE Sneakers</p>
+            <span class="price">₹ 4,500</span><span class="actual-price">₹ 8,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/shoec3.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">PUMA</h2>
+            <p class="product-short-des">White sneakers | For boys</p>
+            <span class="price">₹ 3,499</span><span class="actual-price">₹ 6,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="./ASSETS/shoec4.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TRAELLO</h2>
+            <p class="product-short-des">Womens heals | red</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 2,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/shoec5.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">UNB</h2>
+            <p class="product-short-des">Sneakers | Navy blue</p>
+            <span class="price">₹ 1,599</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">10% off</span>
+                    <img src="./ASSETS/shoec6.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">SMOES</h2>
+            <p class="product-short-des">Smokewhite heals | for women</p>
+            <span class="price">₹ 2,999</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/shoec7.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">SIZZER</h2>
+            <p class="product-short-des">Sports shoes | for men</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 4,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/shoec8.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">CONVERSE</h2>
+            <p class="product-short-des">White boots</p>
+            <span class="price">₹ 3,999</span><span class="actual-price">₹ 6,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/shoec9.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">PUMA</h2>
+            <p class="product-short-des">Grey sport shoes</p>
+            <span class="price">₹ 2,000</span><span class="actual-price">₹ 4,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/shoec10.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Dr. Martens</h2>
+            <p class="product-short-des">Yellow boots</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+        </div>
+    </section><br>
+        <br>
+        <!-- cards container -->
+    <section class="product">
+        <h2 class="product-category">Home Needs</h2><br>
+        <br>
+        <button class="pre-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="./ASSETS/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/HN1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">WAKEFFIT</h2>
+            <p class="product-short-des">GREEN SOFA + TABLE</p>
+            <span class="price">₹ 28,000</span><span class="actual-price">₹ 40,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/HN2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">SLEEPYHEAD</h2>
+            <p class="product-short-des">YELLOW SINGLE CHAIR</p>
+            <span class="price">₹ 6,500</span><span class="actual-price">₹ 9,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/HN3.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">BURROW</h2>
+            <p class="product-short-des">LEATHER|SINGLE CHAIR</p>
+            <span class="price">₹ 8,499</span><span class="actual-price">₹ 12,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="./ASSETS/HN4.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">FLOYD</h2>
+            <p class="product-short-des">LIGHT BROWN SOFA SET</p>
+            <span class="price">₹ 15,999</span><span class="actual-price">₹ 20,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">60% off</span>
+                    <img src="./ASSETS/HN5.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">WEST ELM.</h2>
+            <p class="product-short-des">BEIGE SINGLE SOFA</p>
+            <span class="price">₹ 7,599</span><span class="actual-price">₹ 10,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">10% off</span>
+                    <img src="./ASSETS/HN6.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">LOVESAC</h2>
+            <p class="product-short-des">BALCONY CHAIRS</p>
+            <span class="price">₹ 3,999</span><span class="actual-price">₹ 5,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/HN7.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">FRAMER</h2>
+            <p class="product-short-des">PHOTO FRAMES|HOME NEEDS</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 4,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./ASSETS/HN8.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">VESSEL</h2>
+            <p class="product-short-des">FLOWER VESSEL</p>
+            <span class="price">₹ 3,999</span><span class="actual-price">₹ 6,800</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="./ASSETS/HN9.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TREE MAKER</h2>
+            <p class="product-short-des">CHRISTMAS TREE DECOR</p>
+            <span class="price">₹ 2,000</span><span class="actual-price">₹ 4,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./ASSETS/HN10.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to Wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">MINOR</h2>
+            <p class="product-short-des">OVAL SHAPED MIRROR</p>
+            <span class="price">₹ 1,999</span><span class="actual-price">₹ 3,800</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    
+</body>
+</html>
